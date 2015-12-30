@@ -1,0 +1,21 @@
+{
+  "name": "quick-emote",
+  "main": "index.html",
+  "window": {
+    "show": true,
+    "show_in_taskbar": true,
+    "icon_width": 20,
+    "transparent": false,
+    "frame": true,
+    "resizable": true,
+    "toolbar": true,
+    "width": 1000,
+    "height": 500
+  },
+  "scripts": {
+    "start": "nw ."
+  },
+  "dependencies": {
+    "material-design-lite": "^1.0.6"
+  }
+}
