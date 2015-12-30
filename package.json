@@ -1,21 +1,48 @@
 {
-  "name": "quick-emote",
-  "main": "index.html",
+  "name": "react-nodewebkit",
+  "private": true,
+  "version": "0.0.1",
+  "description": "react node-webkit starter project",
+  "keywords": [],
   "window": {
-    "show": true,
-    "show_in_taskbar": true,
-    "icon_width": 20,
-    "transparent": false,
+    "icon": "app/images/icon.png",
+    "toolbar": false,
     "frame": true,
-    "resizable": true,
-    "toolbar": true,
-    "width": 1000,
-    "height": 500
+    "width": 800,
+    "height": 600,
+    "position": "center",
+    "resizable": true
+  },
+  "webkit": {
+    "plugin": false
+  },
+  "main": "app/index.html",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "browserify": "^11.1.0",
+    "chai": "^3.2.0",
+    "mocha": "^2.0.1",
+    "nw-builder": "^2.0.2",
+    "reactify": "^1.1.1",
+    "watchify": "^3.4.0"
   },
   "scripts": {
-    "start": "nw ."
+    "start": "watchify app/jsx/index.jsx -o app/bundle.js -v",
+    "test": "mocha",
+    "app": "nwbuild --run .",
+    "build": "./build/build",
+    "clean": "rm -rf build/cache app/bundle.js"
   },
-  "dependencies": {
-    "material-design-lite": "^1.0.6"
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
   }
 }
