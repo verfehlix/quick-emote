@@ -19,6 +19,10 @@ win.on('blur', function() {
 	// win.shown = false;
 }.bind(this));
 
+document.getElementById("closeButton").addEventListener("click", function(evt){
+	gui.App.closeAllWindows();
+});
+
 // called when user click on tray icon
 function toggleTrayMenuAt(position) {
 	if (win.shown) {

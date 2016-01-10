@@ -1,5 +1,7 @@
 body, html {
     overflow: hidden !important;
+        font-family: 'Roboto', sans-serif;
+
 }
 section {
     /*background: #fafafa;*/
@@ -28,6 +30,8 @@ section::after {
 }
 
 .emoji-container {
+        font-family: 'Roboto', sans-serif;
+
     width: 100%;
     text-align: center;
     vertical-align: middle;
@@ -38,8 +42,8 @@ section::after {
 }
 
 #headerbar {
-    font-family: 'Roboto', sans-serif;
-    
+        font-family: 'Roboto', sans-serif;
+
     border-radius: 2px 2px 0px 0px;
     position: absolute;
     width: 100%;

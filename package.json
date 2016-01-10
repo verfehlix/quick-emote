@@ -7,9 +7,9 @@
     "icon_width": 20,
     "icon": "app.icns",
     "transparent": true,
-    "frame": true,
+    "frame": false,
     "resizable": false,
-    "toolbar": true,
+    "toolbar": false,
     "width": 500,
     "height": 500
   },
